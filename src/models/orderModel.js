@@ -4,19 +4,19 @@ const orderSchema = new mongoose.Schema({
 
     customerName:{ type:String, required:true, trim:true },
 
-    customerFullAddress:{ street: { type: String, required: true, trim: true },
+    customerFullAddress: {street: { type: String, required: true, trim: true },
 
     city: { type: String, required: true, trim: true },
 
-    pincode: { type: Number, required: true } },
+    pincode: { type: Number, required: true }},
 
     orderLineItems: { type: [], required: true },
 
-    invoiceNumber: { type: String, trim:true },
+    invoiceNumber: { type: String ,required:true, trim:true},
 
-    status: { type: String, enum: ["GENERATED", "COMPLETED", "CANCELLED"] },
+    status: { type: String, enum: ["GENERATED", "COMPLETED", "CANCELLED"], default:"GENERATED" },
 
-    date: { Date },
+    date: { typr:String },
 
     deleted: { type: Boolean, default: false }
 

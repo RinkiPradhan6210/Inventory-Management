@@ -15,9 +15,9 @@ const grnSchema = new mongoose.Schema({
 
     grnLineItems: { type: [], required: true },
 
-    status: { type: String, enum:["GENERATED", "COMPLETED", "CANCELLED"]},
+    status: { type: String, enum:["GENERATED", "COMPLETED", "CANCELLED"], default:"GENERATED"},
 
-    date: { Date },
+    date: { type:String },
 
     deleted: { type: Boolean, default: false }
 
